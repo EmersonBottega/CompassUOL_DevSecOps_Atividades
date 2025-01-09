@@ -29,7 +29,7 @@
 > # Executando tarefas
 > - Feito pelo terminal do Windows10
 
-## 1. Pod, no terminal execute os comandos abaixo.
+## 1) Pod, no terminal execute os comandos abaixo.
 ```
 kubectl run my-pod --image=nginx
 kubectl get pods
