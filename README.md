@@ -14,7 +14,7 @@
 > #### https://kubernetes.io/releases/download/ <br>
 > #### https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download
 
-1) - Criar um pod chamado "my-pod" usando uma imagem simples como "nginx" e verifique seu estado com os comandos de monitoramento do Kubernetes. [MyPod](#Pod)
+1) - Criar um pod chamado "my-pod" usando uma imagem simples como "nginx" e verifique seu estado com os comandos de monitoramento do Kubernetes. [MyPod](#1-Pod,-no-terminal-execute-os-comandos-abaixo.)
 2) - Implantar um Deployment chamado "my-deployment" com três réplicas de uma aplicação baseada na imagem "httpd". Atualize a imagem do Deployment para uma versão mais recente. [MyDeployment](#Deployment)
 3) - Criar um ConfigMap chamado "app-config" com uma variável de configuração personalizada. - Monte o ConfigMap em um pod e verifique se o valor foi aplicado corretamente. [ConfigMap](#ConfigMap)
 4) - Criar um Secret chamado "app-secret" contendo informações sensíveis. Injete o Secret como uma variável de ambiente em um pod e teste se está acessível. [Secret](#Secret)
