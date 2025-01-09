@@ -14,7 +14,7 @@
 > #### https://kubernetes.io/releases/download/ <br>
 > #### https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download
 
-1) - Criar um pod chamado "my-pod" usando uma imagem simples como "nginx" e verifique seu estado com os comandos de monitoramento do Kubernetes. [MyPod](#1-Pod,-no-terminal-execute-os-comandos-abaixo.)
+1) - Criar um pod chamado "my-pod" usando uma imagem simples como "nginx" e verifique seu estado com os comandos de monitoramento do Kubernetes. [MyPod](#1--Pod,-no-terminal-execute-os-comandos-abaixo.)
 2) - Implantar um Deployment chamado "my-deployment" com três réplicas de uma aplicação baseada na imagem "httpd". Atualize a imagem do Deployment para uma versão mais recente. [MyDeployment](#Deployment)
 3) - Criar um ConfigMap chamado "app-config" com uma variável de configuração personalizada. - Monte o ConfigMap em um pod e verifique se o valor foi aplicado corretamente. [ConfigMap](#ConfigMap)
 4) - Criar um Secret chamado "app-secret" contendo informações sensíveis. Injete o Secret como uma variável de ambiente em um pod e teste se está acessível. [Secret](#Secret)
@@ -29,7 +29,7 @@
 > # Executando tarefas
 > - Feito pelo terminal do Windows10
 
-## 1) - Pod, no terminal execute os comandos abaixo.
+## 1- Pod, no terminal execute os comandos abaixo.
 ```
 kubectl run my-pod --image=nginx
 kubectl get pods
@@ -40,7 +40,7 @@ kubectl logs my-pod
 - Após o primeiro comando, verifique como o exemplo abaixo:
 ![1-tarefa-mypod](https://github.com/user-attachments/assets/bee9a4e6-5da1-4a3f-bfc4-6eb9d760f03b)
 
-## 2) - Deployment, no terminal execute os comandos abaixo.
+## 2- Deployment, no terminal execute os comandos abaixo.
 ```
 kubectl create deployment my-deployment --image=httpd --replicas=3
 kubectl get deployments
@@ -52,7 +52,7 @@ kubectl rollout status deployment/my-deployment  # Verificar progresso
 - Exemplo após criar:
 ![2-tarefa-mydeployment](https://github.com/user-attachments/assets/dbe943de-43a1-4a41-9bbc-cade10343fc9)
 
-## 3) - ConfigMap, no terminal execute os comandos abaixo.
+## 3- ConfigMap, no terminal execute os comandos abaixo.
 ```
 kubectl create configmap app-config --from-literal=customKey=customValue
 kubectl get configmaps
@@ -86,7 +86,7 @@ kubectl exec -it config-pod -- printenv CONFIG_KEY
 - Exemplo:
 ![3-tarefa-ConfigMap](https://github.com/user-attachments/assets/6f285a1d-b9e4-492a-b408-f310b0d9604e)
 
-## 4) - Secret, no terminal execute os comandos abaixo.
+## 4- Secret, no terminal execute os comandos abaixo.
 ```
 kubectl create secret generic app-secret --from-literal=username=admin --from-literal=password=pass123
 kubectl get secrets
@@ -127,7 +127,7 @@ kubectl exec -it secret-pod -- printenv SECRET_USERNAME SECRET_PASSWORD
 - Exemplo:
 ![4-tarefa-Secret](https://github.com/user-attachments/assets/b4aecd5e-b457-49f0-9e6b-c9f9099cb692)
 
-## 5) - PersistentVolume e PersistentVolumeClaim.
+## 5- PersistentVolume e PersistentVolumeClaim.
 > [!Important]
 > Crie um arquivo chamado pv.yaml e insira o conteúdo abaixo neste arquivo:
 ```yaml
@@ -195,7 +195,7 @@ kubectl exec -it pv-pod -- cat /mnt/data/hello.txt
 Exemplo:
 ![5-tarefa-PV-PVC](https://github.com/user-attachments/assets/6d627d2d-34bf-44d7-9427-2acda39c9ff1)
 
-## 6) - ClusterIP, no terminal execute os comandos abaixo.
+## 6- ClusterIP, no terminal execute os comandos abaixo.
 ```
 kubectl expose deployment backend --port=80 --target-port=80 --type=ClusterIP
 kubectl get services
@@ -206,7 +206,7 @@ Exemplo:
 ![6-tarefa-ClusterIP](https://github.com/user-attachments/assets/b285a668-d517-475d-94b0-5c62cba9adca)
 ![6-tarefaClusterIP2](https://github.com/user-attachments/assets/d3fec06a-f70b-49c4-a963-69fdf22b5daa)
 
-## 7) - BatchJob.
+## 7- BatchJob.
 > [!Important]
 > Crie um arquivo chamado batch-job.yaml e insira o conteúdo abaixo neste arquivo:
 ```yaml
@@ -235,7 +235,7 @@ kubectl logs job/batch-job
 Exemplo:
 ![7-tarefa-BatchJob](https://github.com/user-attachments/assets/16655d8e-7599-43fe-a83d-525c8b50a879)
 
-## 8) - HPA (Horizontal Pod Autoscaler), no terminal execute os comandos abaixo.
+## 8- HPA (Horizontal Pod Autoscaler), no terminal execute os comandos abaixo.
 ```
 kubectl autoscale deployment hpa-deployment --cpu-percent=50 --min=1 --max=5
 kubectl describe hpa
@@ -246,7 +246,7 @@ kubectl run load-generator --image=busybox -- sh -c "while true; do wget -q -O- 
 - Exemplo:
 ![8-tarefa-hpa](https://github.com/user-attachments/assets/aa8facab-ba9c-4884-8fb0-081e95579cdb)
 
-## 9) - NodePort, no terminal execute os comandos abaixo.
+## 9- NodePort, no terminal execute os comandos abaixo.
 ```
 kubectl expose deployment webapp --type=NodePort --port=80
 kubectl get services
@@ -260,7 +260,7 @@ Exemplo:
 Automaticamente deve abrir uma tela como esta:
 ![9-tarefa-NodePortWeb](https://github.com/user-attachments/assets/6f2ea224-c12e-4c91-92fe-4ea4899db36c)
 
-## 10) - RestartPod.
+## 10- RestartPod.
 > [!Important]
 > Crie um arquivo chamado # restart-pod.yaml e insira o conteúdo abaixo neste arquivo:
 ```yaml
