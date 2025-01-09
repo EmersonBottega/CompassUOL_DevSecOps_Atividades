@@ -232,7 +232,7 @@ kubectl apply -f batch-job.yaml
 kubectl logs job/batch-job
 ```
 
-Exemplo:
+- Exemplo:
 ![7-tarefa-BatchJob](https://github.com/user-attachments/assets/16655d8e-7599-43fe-a83d-525c8b50a879)
 
 ## 8) HPA, no terminal execute os comandos abaixo.
@@ -257,7 +257,7 @@ minikube service webapp <Minikube IP>:<NodePort>
 - Exemplo:
 ![9-tarefa-NodePort](https://github.com/user-attachments/assets/e6d418bd-96d4-45f8-bc2d-bdcbe9a377cf)
 
-Automaticamente deve abrir uma tela como esta:
+- Automaticamente deve abrir uma tela como esta:
 ![9-tarefa-NodePortWeb](https://github.com/user-attachments/assets/6f2ea224-c12e-4c91-92fe-4ea4899db36c)
 
 ## 10) RestartPod.
