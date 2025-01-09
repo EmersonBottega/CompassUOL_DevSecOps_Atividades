@@ -192,7 +192,7 @@ kubectl apply -f pod-with-pvc.yaml
 kubectl exec -it pv-pod -- cat /mnt/data/hello.txt
 ```
 
-Exemplo:
+- Exemplo:
 ![5-tarefa-PV-PVC](https://github.com/user-attachments/assets/6d627d2d-34bf-44d7-9427-2acda39c9ff1)
 
 ## 6) ClusterIP, no terminal execute os comandos abaixo.
@@ -202,7 +202,7 @@ kubectl get services
 kubectl exec -it <backend-pod-name> -- curl http://backend
 ```
 
-Exemplo:
+- Exemplo:
 ![6-tarefa-ClusterIP](https://github.com/user-attachments/assets/b285a668-d517-475d-94b0-5c62cba9adca)
 ![6-tarefaClusterIP2](https://github.com/user-attachments/assets/d3fec06a-f70b-49c4-a963-69fdf22b5daa)
 
@@ -254,7 +254,7 @@ kubectl get services
 minikube service webapp <Minikube IP>:<NodePort>
 ```
 
-Exemplo:
+- Exemplo:
 ![9-tarefa-NodePort](https://github.com/user-attachments/assets/e6d418bd-96d4-45f8-bc2d-bdcbe9a377cf)
 
 Automaticamente deve abrir uma tela como esta:
@@ -262,7 +262,7 @@ Automaticamente deve abrir uma tela como esta:
 
 ## 10) RestartPod.
 > [!Important]
-> Crie um arquivo chamado # restart-pod.yaml e insira o conteúdo abaixo neste arquivo:
+> Crie um arquivo chamado restart-pod.yaml e insira o conteúdo abaixo neste arquivo:
 ```yaml
 # restart-pod.yaml
 apiVersion: v1
